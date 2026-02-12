@@ -1,14 +1,9 @@
 ---
-const pages = [
-  {
-    name: "Advice Generator App",
-    link: "advice-generator-app/",
-  },
-  {
-    name: "Article Preview Component",
-    link: "article-preview-component",
-  },
-];
+import projectNames from "../projectNames";
+
+function transformPageNameToLink(name: string) {
+  return name.toLowerCase().replaceAll(" ", "-");
+}
 ---
 
 <html lang="en">
@@ -20,24 +15,42 @@ const pages = [
   </head>
   <body>
     <main>
-      {
-        pages.map((page) => {
-          return <a href={`${page.link}/`}>{page.name}</a>;
-        })
-      }
+      <ul class="projects">
+        <h1>Projects</h1>
+        {
+          projectNames.map((name) => {
+            return (
+              <li>
+                <a href={transformPageNameToLink(name)}>{name}</a>
+              </li>
+            );
+          })
+        }
+      </ul>
     </main>
   </body>
 </html>
 
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-  }
-
   *,
   *::after,
   *::before {
     box-sizing: border-box;
+  }
+
+  html {
+  }
+
+  body {
+  }
+
+  main {
+  }
+
+  ul.projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    justify-items: center;
   }
 </style>

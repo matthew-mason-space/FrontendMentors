@@ -5,7 +5,9 @@
       "comments": false,
       "other": false,
       "strings": false
-    }
+    },
+    "editor.suggest.showSnippets": true,
+    "editor.suggest.showWords": false
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -38,19 +40,19 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "files.exclude": {
-    "**/.DS_Store": true,
     "**/.astro": true,
+    "**/.DS_Store": true,
     "**/.git": true,
     "**/.hg": true,
     "**/.mvn": true,
     "**/.svn": true,
-    "**/Thumbs.db": true,
     "**/dist": true,
     "**/mvnw": true,
     "**/mvnw.cmd": true,
     "**/node_modules": true,
     "**/pnpm-lock.yaml": true,
-    "**/target": true
+    "**/target": true,
+    "**/Thumbs.db": true
   },
   "java.configuration.updateBuildConfiguration": "automatic"
 }

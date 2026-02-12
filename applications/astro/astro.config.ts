@@ -8,5 +8,4 @@ export default defineConfig({
   },
   output: "static",
   integrations: [],
-  trailingSlash: "always",
 });
